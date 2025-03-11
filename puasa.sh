@@ -2,11 +2,11 @@
 
 # STEP 1
 echo "Menghapus sources.list.d/git-lfs.list jika ada..."
-sudo rm /etc/apt/sources.list.d/git-lfs.list 2>/dev/null
+sudo rm /etc/yum.repos.d/git-lfs.list 2>/dev/null
 echo "Update sistem..."
-sudo apt update || { echo "Gagal update, cek koneksi internet!"; exit 1; }
+sudo yum update -y || { echo "Gagal update, cek koneksi internet!"; exit 1; }
 echo "Menginstall screen..."
-sudo apt-get install screen -y || { echo "Gagal menginstall screen"; exit 1; }
+sudo yum install screen -y || { echo "Gagal menginstall screen"; exit 1; }
 
 # STEP 2
 echo "Mendownload dan mengekstrak xmrig..."
